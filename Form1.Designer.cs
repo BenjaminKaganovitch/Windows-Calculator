@@ -49,167 +49,185 @@
             // 
             // button1
             // 
+            button1.BackColor = Color.SeaGreen;
             button1.Font = new Font("TI-Nspire Sans", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             button1.Location = new Point(163, 94);
             button1.Name = "button1";
             button1.Size = new Size(92, 70);
             button1.TabIndex = 0;
             button1.Text = "1";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // button2
             // 
+            button2.BackColor = Color.SeaGreen;
             button2.Font = new Font("TI-Nspire Sans", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             button2.Location = new Point(261, 94);
             button2.Name = "button2";
             button2.Size = new Size(92, 70);
             button2.TabIndex = 1;
-            button2.Text = "1";
-            button2.UseVisualStyleBackColor = true;
+            button2.Text = "2";
+            button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
             // button3
             // 
+            button3.BackColor = Color.SeaGreen;
             button3.Font = new Font("TI-Nspire Sans", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             button3.Location = new Point(359, 94);
             button3.Name = "button3";
             button3.Size = new Size(92, 70);
             button3.TabIndex = 2;
-            button3.Text = "1";
-            button3.UseVisualStyleBackColor = true;
+            button3.Text = "3";
+            button3.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
+            button4.BackColor = Color.SeaGreen;
             button4.Font = new Font("TI-Nspire Sans", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             button4.Location = new Point(163, 170);
             button4.Name = "button4";
             button4.Size = new Size(92, 70);
             button4.TabIndex = 3;
-            button4.Text = "1";
-            button4.UseVisualStyleBackColor = true;
+            button4.Text = "4";
+            button4.UseVisualStyleBackColor = false;
             // 
             // button5
             // 
+            button5.BackColor = Color.SeaGreen;
             button5.Font = new Font("TI-Nspire Sans", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             button5.Location = new Point(261, 170);
             button5.Name = "button5";
             button5.Size = new Size(92, 70);
             button5.TabIndex = 4;
-            button5.Text = "1";
-            button5.UseVisualStyleBackColor = true;
+            button5.Text = "5";
+            button5.UseVisualStyleBackColor = false;
             // 
             // button6
             // 
+            button6.BackColor = Color.SeaGreen;
             button6.Font = new Font("TI-Nspire Sans", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             button6.Location = new Point(359, 170);
             button6.Name = "button6";
             button6.Size = new Size(92, 70);
             button6.TabIndex = 5;
-            button6.Text = "1";
-            button6.UseVisualStyleBackColor = true;
+            button6.Text = "6";
+            button6.UseVisualStyleBackColor = false;
             // 
             // button7
             // 
+            button7.BackColor = Color.SeaGreen;
             button7.Font = new Font("TI-Nspire Sans", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             button7.Location = new Point(163, 246);
             button7.Name = "button7";
             button7.Size = new Size(92, 70);
             button7.TabIndex = 6;
-            button7.Text = "1";
-            button7.UseVisualStyleBackColor = true;
+            button7.Text = "7";
+            button7.UseVisualStyleBackColor = false;
             // 
             // button8
             // 
+            button8.BackColor = Color.SeaGreen;
             button8.Font = new Font("TI-Nspire Sans", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             button8.Location = new Point(261, 246);
             button8.Name = "button8";
             button8.Size = new Size(92, 70);
             button8.TabIndex = 7;
-            button8.Text = "1";
-            button8.UseVisualStyleBackColor = true;
+            button8.Text = "8";
+            button8.UseVisualStyleBackColor = false;
             // 
             // button9
             // 
+            button9.BackColor = Color.SeaGreen;
             button9.Font = new Font("TI-Nspire Sans", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             button9.Location = new Point(359, 246);
             button9.Name = "button9";
             button9.Size = new Size(92, 70);
             button9.TabIndex = 8;
-            button9.Text = "1";
-            button9.UseVisualStyleBackColor = true;
+            button9.Text = "9";
+            button9.UseVisualStyleBackColor = false;
+            button9.Click += button9_Click;
             // 
             // button10
             // 
+            button10.BackColor = Color.SeaGreen;
             button10.Font = new Font("TI-Nspire Sans", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            button10.ForeColor = Color.SeaGreen;
             button10.Location = new Point(457, 94);
             button10.Name = "button10";
             button10.Size = new Size(92, 70);
             button10.TabIndex = 9;
             button10.Text = "=";
-            button10.UseVisualStyleBackColor = true;
+            button10.UseVisualStyleBackColor = false;
             // 
             // button11
             // 
+            button11.BackColor = Color.SeaGreen;
             button11.Font = new Font("TI-Nspire Sans", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             button11.Location = new Point(457, 170);
             button11.Name = "button11";
             button11.Size = new Size(92, 70);
             button11.TabIndex = 10;
             button11.Text = "+";
-            button11.UseVisualStyleBackColor = true;
+            button11.UseVisualStyleBackColor = false;
             // 
             // button12
             // 
+            button12.BackColor = Color.SeaGreen;
             button12.Font = new Font("TI-Nspire Sans", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             button12.Location = new Point(457, 246);
             button12.Name = "button12";
             button12.Size = new Size(92, 70);
             button12.TabIndex = 11;
             button12.Text = "-";
-            button12.UseVisualStyleBackColor = true;
+            button12.UseVisualStyleBackColor = false;
             button12.Click += button12_Click;
             // 
             // button13
             // 
+            button13.BackColor = Color.SeaGreen;
             button13.Font = new Font("TI-Nspire Sans", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             button13.Location = new Point(163, 322);
             button13.Name = "button13";
             button13.Size = new Size(92, 70);
             button13.TabIndex = 12;
             button13.Text = "/";
-            button13.UseVisualStyleBackColor = true;
+            button13.UseVisualStyleBackColor = false;
             button13.Click += button13_Click;
             // 
             // button14
             // 
+            button14.BackColor = Color.SeaGreen;
             button14.Font = new Font("TI-Nspire Sans", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             button14.Location = new Point(261, 322);
             button14.Name = "button14";
             button14.Size = new Size(92, 70);
             button14.TabIndex = 13;
             button14.Text = "*";
-            button14.UseVisualStyleBackColor = true;
+            button14.UseVisualStyleBackColor = false;
             // 
             // button17
             // 
+            button17.BackColor = Color.SeaGreen;
             button17.Font = new Font("TI-Nspire Sans", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             button17.Location = new Point(359, 322);
             button17.Name = "button17";
             button17.Size = new Size(92, 70);
             button17.TabIndex = 16;
             button17.Text = ".";
-            button17.UseVisualStyleBackColor = true;
+            button17.UseVisualStyleBackColor = false;
             // 
             // button18
             // 
+            button18.BackColor = Color.SeaGreen;
             button18.Font = new Font("TI-Nspire Sans", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             button18.Location = new Point(457, 322);
             button18.Name = "button18";
             button18.Size = new Size(92, 70);
             button18.TabIndex = 17;
             button18.Text = "Clr";
-            button18.UseVisualStyleBackColor = true;
+            button18.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
@@ -222,6 +240,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DimGray;
             ClientSize = new Size(800, 450);
             Controls.Add(textBox1);
             Controls.Add(button18);
