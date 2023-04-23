@@ -52,16 +52,14 @@
             button14 = new Button();
             button17 = new Button();
             button18 = new Button();
-            groupBox1 = new GroupBox();
-            radioButton3 = new RadioButton();
-            radioButton2 = new RadioButton();
-            radioButton1 = new RadioButton();
             labelCurrentOperation = new Label();
             Answere = new TextBox();
             button15 = new Button();
             button16 = new Button();
             button10 = new Button();
-            groupBox1.SuspendLayout();
+            button19 = new Button();
+            button20 = new Button();
+            button21 = new Button();
             SuspendLayout();
             // 
             // button1
@@ -230,6 +228,7 @@
             button17.TabIndex = 16;
             button17.Text = ".";
             button17.UseVisualStyleBackColor = false;
+            button17.Click += NumButton;
             // 
             // button18
             // 
@@ -242,56 +241,6 @@
             button18.Text = "C";
             button18.UseVisualStyleBackColor = false;
             button18.Click += button18_Click;
-            // 
-            // groupBox1
-            // 
-            groupBox1.Controls.Add(radioButton3);
-            groupBox1.Controls.Add(radioButton2);
-            groupBox1.Controls.Add(radioButton1);
-            groupBox1.Location = new Point(576, 94);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(250, 125);
-            groupBox1.TabIndex = 20;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "groupBox1";
-            // 
-            // radioButton3
-            // 
-            radioButton3.AutoCheck = false;
-            radioButton3.AutoSize = true;
-            radioButton3.Location = new Point(12, 87);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(56, 24);
-            radioButton3.TabIndex = 2;
-            radioButton3.Text = "LOC";
-            radioButton3.UseVisualStyleBackColor = true;
-            radioButton3.CheckedChanged += radioButton3_CheckedChanged;
-            // 
-            // radioButton2
-            // 
-            radioButton2.AutoCheck = false;
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(12, 57);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(54, 24);
-            radioButton2.TabIndex = 1;
-            radioButton2.Text = "BIN";
-            radioButton2.UseVisualStyleBackColor = true;
-            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
-            // 
-            // radioButton1
-            // 
-            radioButton1.AutoCheck = false;
-            radioButton1.AutoSize = true;
-            radioButton1.Checked = true;
-            radioButton1.Location = new Point(12, 30);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(58, 24);
-            radioButton1.TabIndex = 0;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "DEC";
-            radioButton1.UseVisualStyleBackColor = true;
-            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
             // 
             // labelCurrentOperation
             // 
@@ -309,6 +258,7 @@
             Answere.Name = "Answere";
             Answere.Size = new Size(125, 27);
             Answere.TabIndex = 23;
+            Answere.Text = "0";
             Answere.TextChanged += Answere_TextChanged;
             // 
             // button15
@@ -339,7 +289,7 @@
             // 
             button10.BackColor = Color.SeaGreen;
             button10.Font = new Font("TI-Nspire Sans", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            button10.Location = new Point(457, 97);
+            button10.Location = new Point(457, 94);
             button10.Name = "button10";
             button10.Size = new Size(92, 70);
             button10.TabIndex = 26;
@@ -347,18 +297,54 @@
             button10.UseVisualStyleBackColor = false;
             button10.Click += button10_Click;
             // 
+            // button19
+            // 
+            button19.BackColor = Color.SeaGreen;
+            button19.Font = new Font("TI-Nspire Sans", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            button19.Location = new Point(555, 94);
+            button19.Name = "button19";
+            button19.Size = new Size(92, 70);
+            button19.TabIndex = 27;
+            button19.Text = "BIN";
+            button19.UseVisualStyleBackColor = false;
+            button19.Click += ModeConvert;
+            // 
+            // button20
+            // 
+            button20.BackColor = Color.SeaGreen;
+            button20.Font = new Font("TI-Nspire Sans", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            button20.Location = new Point(555, 170);
+            button20.Name = "button20";
+            button20.Size = new Size(92, 70);
+            button20.TabIndex = 28;
+            button20.Text = "DEC";
+            button20.UseVisualStyleBackColor = false;
+            // 
+            // button21
+            // 
+            button21.BackColor = Color.SeaGreen;
+            button21.Font = new Font("TI-Nspire Sans", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            button21.Location = new Point(554, 246);
+            button21.Name = "button21";
+            button21.Size = new Size(92, 70);
+            button21.TabIndex = 29;
+            button21.Text = "LOC";
+            button21.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DimGray;
             ClientSize = new Size(800, 450);
+            Controls.Add(button21);
+            Controls.Add(button20);
+            Controls.Add(button19);
             Controls.Add(button10);
             Controls.Add(button16);
             Controls.Add(button15);
             Controls.Add(Answere);
             Controls.Add(labelCurrentOperation);
-            Controls.Add(groupBox1);
             Controls.Add(button18);
             Controls.Add(button17);
             Controls.Add(button14);
@@ -376,8 +362,6 @@
             Controls.Add(button1);
             Name = "Form1";
             Text = "Form1";
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -399,14 +383,13 @@
         private Button button14;
         private Button button17;
         private Button button18;
-        private GroupBox groupBox1;
-        private RadioButton radioButton3;
-        private RadioButton radioButton2;
-        private RadioButton radioButton1;
         private Label labelCurrentOperation;
         private TextBox Answere;
         private Button button15;
         private Button button16;
         private Button button10;
+        private Button button19;
+        private Button button20;
+        private Button button21;
     }
 }
