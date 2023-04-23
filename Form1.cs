@@ -16,7 +16,7 @@ namespace CalculatorVerstion2
             Button button = (Button)sender;
             Answere.Text = Answere.Text + "1";
             isOperationPerformed = false;
-            
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -24,7 +24,7 @@ namespace CalculatorVerstion2
             Button button = (Button)sender;
             Answere.Text = Answere.Text + "2";
             isOperationPerformed = false;
-            
+
         }
 
         private void button3_Click_1(object sender, EventArgs e)
@@ -32,7 +32,7 @@ namespace CalculatorVerstion2
             Button button = (Button)sender;
             Answere.Text = Answere.Text + "3";
             isOperationPerformed = false;
-            
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace CalculatorVerstion2
             Button button = (Button)sender;
             Answere.Text = Answere.Text + "4";
             isOperationPerformed = false;
-            
+
         }
 
 
@@ -49,7 +49,7 @@ namespace CalculatorVerstion2
             Button button = (Button)sender;
             Answere.Text = Answere.Text + "5";
             isOperationPerformed = false;
-            
+
         }
 
         private void button6_Click_1(object sender, EventArgs e)
@@ -57,14 +57,14 @@ namespace CalculatorVerstion2
             Button button = (Button)sender;
             Answere.Text = Answere.Text + "6";
             isOperationPerformed = false;
-            
+
         }
         private void button7_Click_1(object sender, EventArgs e)
         {
             Button button = (Button)sender;
             Answere.Text = Answere.Text + "7";
             isOperationPerformed = false;
-            
+
         }
 
 
@@ -73,7 +73,7 @@ namespace CalculatorVerstion2
             Button button = (Button)sender;
             Answere.Text = Answere.Text + "8";
             isOperationPerformed = false;
-            
+
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -81,7 +81,7 @@ namespace CalculatorVerstion2
             Button button = (Button)sender;
             Answere.Text = Answere.Text + "9";
             isOperationPerformed = false;
-            
+
         }
 
         private void button9_Click_1(object sender, EventArgs e)
@@ -89,7 +89,7 @@ namespace CalculatorVerstion2
             Button button = (Button)sender;
             Answere.Text = Answere.Text + "9";
             isOperationPerformed = false;
-            
+
         }
 
         // This button is for zero
@@ -98,13 +98,13 @@ namespace CalculatorVerstion2
             Button button = (Button)sender;
             Answere.Text = Answere.Text + "0";
             isOperationPerformed = false;
-            
+
         }
 
 
 
 
-        
+
 
 
 
@@ -136,7 +136,7 @@ namespace CalculatorVerstion2
 
 
 
-        
+
 
 
 
@@ -241,6 +241,11 @@ namespace CalculatorVerstion2
         }
 
         private void button13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NumButton(object sender, EventArgs e)
         {
 
         }
