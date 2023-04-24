@@ -1,3 +1,6 @@
+using System.Text;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
+
 namespace CalculatorVerstion2
 {
     public partial class Form1 : Form
@@ -6,6 +9,9 @@ namespace CalculatorVerstion2
         // Operation Performed Varaiables
         String operationPerformed = "";
         bool isOperationPerformed = false;
+
+        // This will be used to keep track of what mode the program is in, such as "DEC", "BIN", "LOC", etc:
+        String mode = "DEC";
 
         // Result Value Varaiables
         Double resultValue = 0;
@@ -20,7 +26,7 @@ namespace CalculatorVerstion2
         private void NumButton(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            if ((Answere.Text == "0") || (isOperationPerformed))
+            if ((Answere.Text == "0") || (isOperationPerformed) || Answere.Text == "Error")
                 Answere.Clear();
             isOperationPerformed = false;
 
@@ -36,28 +42,7 @@ namespace CalculatorVerstion2
                 Answere.Text = Answere.Text + button.Text;
         }
 
-        // This is for the radio buttons to switch between modes
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            // DEC radio button
-            radioButton2.Checked = false;
-            radioButton3.Checked = false;
-        }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            // BIN radio button
-            radioButton1.Checked = false;
-            radioButton3.Checked = false;
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-            // LOC radio button
-            radioButton1.Checked = false;
-            radioButton2.Checked = false;
-
-        }
 
         // The following code is for the operation buttons: +, -, *, /
         private void PerformOperation(object sender, EventArgs e)
@@ -89,18 +74,12 @@ namespace CalculatorVerstion2
         }
 
 
-
-        // CE button
-        private void button16_Click(object sender, EventArgs e)
-        {
-            Answere.Text = "0";
-        }
-
         // C button
         private void button18_Click(object sender, EventArgs e)
         {
             Answere.Text = "0";
-            resultValue = 0;
+            mode = "DEC";
+            //resultValue = 0;
         }
 
 
@@ -128,6 +107,91 @@ namespace CalculatorVerstion2
             labelCurrentOperation.Text = "";
         }
 
+
+
+        // this method will handle you switching to different modes, such as 'bin" or "loc", etc:
+        private void ModeConvert(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+
+            if (button.Text == "BIN")
+            {
+                // Convert the current answer to binary
+                int decValue = int.Parse(Answere.Text);
+                Answere.Text = Convert.ToString(decValue, 2);
+                mode = "BIN";
+            }
+            else if (button.Text == "DEC")
+            {
+                // Convert the current answer to decimal (if it's currently in binary)
+                if (mode == "BIN")
+                {
+                    int binValue = Convert.ToInt32(Answere.Text, 2);
+                    Answere.Text = binValue.ToString();
+                }
+                // Cannot convert from location numeral to decimal
+                else if (mode == "LOC")
+                {
+                    Answere.Text = "Error";
+                    return;
+                }
+                mode = "DEC";
+            }
+            else if (button.Text == "LOC")
+            {
+                // Convert the current answer to a location numeral (if it's currently in decimal)
+                if (mode == "DEC")
+                {
+                    decimal decimalValue = decimal.Parse(Answere.Text);
+                    string locationNumeral = "";
+
+                    // Convert integer part to location numeral
+                    int integerPart = (int)Math.Truncate(decimalValue);
+                    while (integerPart > 0)
+                    {
+                        int remainder = integerPart % 27;
+                        if (remainder == 0)
+                        {
+                            locationNumeral = " " + locationNumeral;
+                        }
+                        else
+                        {
+                            char character = (char)(remainder + 96);
+                            locationNumeral = character + locationNumeral;
+                        }
+                        integerPart = (integerPart - remainder) / 27;
+                    }
+
+                    // Convert fractional part to location numeral
+                    decimal fractionalPart = decimalValue - Math.Truncate(decimalValue);
+                    if (fractionalPart > 0)
+                    {
+                        locationNumeral += ".";
+                        for (int i = 0; i < 5; i++)
+                        {
+                            fractionalPart *= 27;
+                            int digit = (int)Math.Truncate(fractionalPart);
+                            char character = (char)(digit + 96);
+                            locationNumeral += character;
+                            fractionalPart -= digit;
+                        }
+                    }
+
+                    Answere.Text = locationNumeral;
+                    mode = "LOC";
+                }
+                //else if (mode == "BIN")
+                //{
+                //    Answere.Text = "Error";
+                //    return;
+                //}
+                else
+                {
+                    Answere.Text = "Error";
+                    return;
+                }
+            }
+        }
         private void label1_Click_1(object sender, EventArgs e)
         {
 
@@ -139,9 +203,5 @@ namespace CalculatorVerstion2
 
         }
 
-        private void ModeConvert(object sender, EventArgs e)
-        {
-
-        }
     }
 }

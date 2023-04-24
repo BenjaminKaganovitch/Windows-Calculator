@@ -55,7 +55,6 @@
             labelCurrentOperation = new Label();
             Answere = new TextBox();
             button15 = new Button();
-            button16 = new Button();
             button10 = new Button();
             button19 = new Button();
             button20 = new Button();
@@ -247,9 +246,8 @@
             labelCurrentOperation.AutoSize = true;
             labelCurrentOperation.Location = new Point(159, 23);
             labelCurrentOperation.Name = "labelCurrentOperation";
-            labelCurrentOperation.Size = new Size(157, 20);
+            labelCurrentOperation.Size = new Size(0, 20);
             labelCurrentOperation.TabIndex = 22;
-            labelCurrentOperation.Text = "labelCurrentOperation";
             labelCurrentOperation.Click += label1_Click_1;
             // 
             // Answere
@@ -265,25 +263,13 @@
             // 
             button15.BackColor = Color.SeaGreen;
             button15.Font = new Font("TI-Nspire Sans", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            button15.Location = new Point(65, 246);
+            button15.Location = new Point(555, 322);
             button15.Name = "button15";
             button15.Size = new Size(92, 70);
             button15.TabIndex = 24;
             button15.Text = "0";
             button15.UseVisualStyleBackColor = false;
             button15.Click += NumButton;
-            // 
-            // button16
-            // 
-            button16.BackColor = Color.SeaGreen;
-            button16.Font = new Font("TI-Nspire Sans", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            button16.Location = new Point(554, 322);
-            button16.Name = "button16";
-            button16.Size = new Size(92, 70);
-            button16.TabIndex = 25;
-            button16.Text = "CE";
-            button16.UseVisualStyleBackColor = false;
-            button16.Click += button16_Click;
             // 
             // button10
             // 
@@ -319,6 +305,7 @@
             button20.TabIndex = 28;
             button20.Text = "DEC";
             button20.UseVisualStyleBackColor = false;
+            button20.Click += ModeConvert;
             // 
             // button21
             // 
@@ -330,6 +317,7 @@
             button21.TabIndex = 29;
             button21.Text = "LOC";
             button21.UseVisualStyleBackColor = false;
+            button21.Click += ModeConvert;
             // 
             // Form1
             // 
@@ -341,7 +329,6 @@
             Controls.Add(button20);
             Controls.Add(button19);
             Controls.Add(button10);
-            Controls.Add(button16);
             Controls.Add(button15);
             Controls.Add(Answere);
             Controls.Add(labelCurrentOperation);
@@ -386,7 +373,6 @@
         private Label labelCurrentOperation;
         private TextBox Answere;
         private Button button15;
-        private Button button16;
         private Button button10;
         private Button button19;
         private Button button20;
