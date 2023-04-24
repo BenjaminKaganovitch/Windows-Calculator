@@ -6,15 +6,17 @@ namespace CalculatorVerstion2
     public partial class Form1 : Form
     {
 
-        // Operation Performed Varaiables
-        String operationPerformed = "";
-        bool isOperationPerformed = false;
+        
 
         // This will be used to keep track of what mode the program is in, such as "DEC", "BIN", "LOC", etc:
         String mode = "DEC";
 
         // Result Value Varaiables
         Double resultValue = 0;
+
+        // Operation Performed Varaiables
+        String operationPerformed = "";
+        bool isOperationUsed = false;
 
 
         public Form1()
@@ -26,9 +28,9 @@ namespace CalculatorVerstion2
         private void NumButton(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            if ((Answere.Text == "0") || (isOperationPerformed) || Answere.Text == "Error")
+            if ((Answere.Text == "0") || (isOperationUsed) || Answere.Text == "Error")
                 Answere.Clear();
-            isOperationPerformed = false;
+            isOperationUsed = false;
 
             // This code will check if the text box has a decimal point , if it does not it will not add another one.
             // If it does have a decimal point it will add the number to the text box.
@@ -55,7 +57,7 @@ namespace CalculatorVerstion2
                 button10.PerformClick(); // simulate a click on the equals button to perform the previous operation
                 operationPerformed = button.Text;
                 labelCurrentOperation.Text = resultValue + " " + operationPerformed; // update the label to show the current operation
-                isOperationPerformed = true;
+                isOperationUsed = true;
             }
             // If there is no previous result, store the current value and operation
             else
@@ -63,14 +65,14 @@ namespace CalculatorVerstion2
                 operationPerformed = button.Text;
                 resultValue = Double.Parse(Answere.Text);
                 labelCurrentOperation.Text = resultValue + " " + operationPerformed; // update the label to show the current operation
-                isOperationPerformed = true;
+                isOperationUsed = true;
             }
 
             // Store the current value and operation and update the label to show the current operation
             operationPerformed = button.Text;
             resultValue = Double.Parse(Answere.Text);
             labelCurrentOperation.Text = resultValue + " " + operationPerformed;
-            isOperationPerformed = true;
+            isOperationUsed = true;
         }
 
 
