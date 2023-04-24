@@ -5,9 +5,6 @@ namespace CalculatorVerstion2
 {
     public partial class Form1 : Form
     {
-
-        
-
         // This will be used to keep track of what mode the program is in, such as "DEC", "BIN", "LOC", etc:
         String mode = "DEC";
 
@@ -18,11 +15,12 @@ namespace CalculatorVerstion2
         String operationPerformed = "";
         bool isOperationUsed = false;
 
-
         public Form1()
         {
             InitializeComponent();
         }
+
+
 
         // This will handle all the number buttons
         private void NumButton(object sender, EventArgs e)
@@ -54,9 +52,10 @@ namespace CalculatorVerstion2
             // If there is a previous result, perform the operation and display it
             if (resultValue != 0)
             {
-                button10.PerformClick(); // simulate a click on the equals button to perform the previous operation
+                // simulate a click on the equals button to perform the previous operation
+                button10.PerformClick(); 
                 operationPerformed = button.Text;
-                labelCurrentOperation.Text = resultValue + " " + operationPerformed; // update the label to show the current operation
+                labelOperatorUsed.Text = resultValue + " " + operationPerformed; 
                 isOperationUsed = true;
             }
             // If there is no previous result, store the current value and operation
@@ -64,25 +63,26 @@ namespace CalculatorVerstion2
             {
                 operationPerformed = button.Text;
                 resultValue = Double.Parse(Answere.Text);
-                labelCurrentOperation.Text = resultValue + " " + operationPerformed; // update the label to show the current operation
+                labelOperatorUsed.Text = resultValue + " " + operationPerformed; 
                 isOperationUsed = true;
             }
 
             // Store the current value and operation and update the label to show the current operation
             operationPerformed = button.Text;
             resultValue = Double.Parse(Answere.Text);
-            labelCurrentOperation.Text = resultValue + " " + operationPerformed;
+            labelOperatorUsed.Text = resultValue + " " + operationPerformed;
             isOperationUsed = true;
         }
 
 
-        // C button
+
+        // Clear button
         private void button18_Click(object sender, EventArgs e)
         {
             Answere.Text = "0";
             mode = "DEC";
-            //resultValue = 0;
         }
+
 
 
         // = button
@@ -106,12 +106,13 @@ namespace CalculatorVerstion2
                     break;
             }
             resultValue = Double.Parse(Answere.Text);
-            labelCurrentOperation.Text = "";
+            labelOperatorUsed.Text = "";
         }
 
 
 
         // this method will handle you switching to different modes, such as 'bin" or "loc", etc:
+        // Im assuming this satisfys the bonus requirement of having tabs for different modes, as they perform converstions between modes as you switch from one to another
         private void ModeConvert(object sender, EventArgs e)
         {
             Button button = (Button)sender;
@@ -182,11 +183,7 @@ namespace CalculatorVerstion2
                     Answere.Text = locationNumeral;
                     mode = "LOC";
                 }
-                //else if (mode == "BIN")
-                //{
-                //    Answere.Text = "Error";
-                //    return;
-                //}
+
                 else
                 {
                     Answere.Text = "Error";

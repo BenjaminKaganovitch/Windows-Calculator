@@ -52,7 +52,7 @@
             button14 = new Button();
             button17 = new Button();
             button18 = new Button();
-            labelCurrentOperation = new Label();
+            labelOperatorUsed = new Label();
             Answere = new TextBox();
             button15 = new Button();
             button10 = new Button();
@@ -243,12 +243,12 @@
             // 
             // labelCurrentOperation
             // 
-            labelCurrentOperation.AutoSize = true;
-            labelCurrentOperation.Location = new Point(159, 23);
-            labelCurrentOperation.Name = "labelCurrentOperation";
-            labelCurrentOperation.Size = new Size(0, 20);
-            labelCurrentOperation.TabIndex = 22;
-            labelCurrentOperation.Click += label1_Click_1;
+            labelOperatorUsed.AutoSize = true;
+            labelOperatorUsed.Location = new Point(159, 23);
+            labelOperatorUsed.Name = "labelOperatorUsed";
+            labelOperatorUsed.Size = new Size(0, 20);
+            labelOperatorUsed.TabIndex = 22;
+            labelOperatorUsed.Click += label1_Click_1;
             // 
             // Answere
             // 
@@ -331,7 +331,7 @@
             Controls.Add(button10);
             Controls.Add(button15);
             Controls.Add(Answere);
-            Controls.Add(labelCurrentOperation);
+            Controls.Add(labelOperatorUsed);
             Controls.Add(button18);
             Controls.Add(button17);
             Controls.Add(button14);
@@ -370,7 +370,7 @@
         private Button button14;
         private Button button17;
         private Button button18;
-        private Label labelCurrentOperation;
+        private Label labelOperatorUsed;
         private TextBox Answere;
         private Button button15;
         private Button button10;
